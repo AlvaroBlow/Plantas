@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if(!isset($_SESSION['usuario'])){
 
@@ -66,7 +66,7 @@ extract($_SESSION);
           <img src="../dist/img/logoAconcagua.png" style="display: block; height: auto; width: 12.1rem;" alt="User Image">
         </div>
         <div class="info">
-          
+
         </div>
       </div>
 
@@ -175,7 +175,7 @@ extract($_SESSION);
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              
+
                   <!--FORMULARIO DE INGRESO DE CALIDAD EN LINEA-->
 
               <div class="col-md-12">
@@ -194,7 +194,7 @@ extract($_SESSION);
                     </tr>
                   </thead>
                     <tbody>
-                    <?php      
+                    <?php
                           require_once("clases/clase_ConfiguracionLinea.php");
                           $conf =  new CALIDADLINEA();
                           $conf->set_nTabla('PALETIZADORAS');
@@ -214,7 +214,7 @@ extract($_SESSION);
                         </button>
                       </div>
                       <div class="modal-body">
-                        Datos Palet: 
+                        Datos Palet:
                         <!--Contenido de la Modal-->
                        <table class="table table-bordered table-responsive-sm">
                         <thead>
@@ -251,7 +251,7 @@ extract($_SESSION);
                                 <td><input type="text" name="ux_cant" id="ax_cant" value="" class="form-control" readonly></td>
                               </tr>
                             </tbody>
-                        
+
                       </table>
                       </div>
                       <div class="modal-footer">
@@ -313,10 +313,8 @@ extract($_SESSION);
 <script src="../plugins/jquery-mapael/maps/usa_states.min.js"></script>
 
 <script type="text/javascript">
- 
-    function procesa(id){}  
 
-
+    function procesa(id){}
     function procesa2() {
             var valor = $("#ax_ordprev").val();
 
@@ -327,13 +325,12 @@ extract($_SESSION);
         });
     }
 
-    /*   
-    $( document ).ready(function() {          
+    /*
+    $( document ).ready(function() {
         $("#boton2").on('click', function(){
             $(".modal-content").remove();
         });
     });*/
-    
     $('#formulario').submit(function(e){
       e.preventDefault();
               var url = "acciones/editarOP.php";
@@ -348,10 +345,9 @@ extract($_SESSION);
                           $(this).removeData('bs.modal');
                       });
                     }
-                }); 
+                });
       });
 
 </script>
-
 </body>
 </html>
